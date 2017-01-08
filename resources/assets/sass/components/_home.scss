@@ -1,0 +1,381 @@
+.home {
+  $nav-height: 45px;
+
+  header {
+    position: fixed;
+    z-index: 2;
+    height: $nav-height;
+    top: 0;
+    width: 100%;
+    background: rgba($blue, 0);
+    transition: background .5s;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &.with-bg {
+      background: rgba($blue, .9);
+    }
+
+    ul {
+      height: 100%;
+
+      li {
+        padding: 15px 30px;
+        list-style-type: none;
+        display: inline-block;
+
+        a {
+          color: white;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: color .2s;
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  .banner .parallax-window {
+    height: 450px;
+    position: relative;
+
+    @media (max-width: 768px) {
+      height: 250px;
+    }
+
+    .title-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .title {
+        text-transform: uppercase;
+        color: white;
+        text-shadow: 3px 3px 5px black;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .intro {
+    background: $orange;
+    padding: 45px 0;
+    color: white;
+    font-size: 1.2em;
+
+    .title {
+      color: white;
+      font-weight: bold;
+    }
+
+    .avatar {
+      $avatar-size: 175px;
+      display: inline-block;
+      border-radius: 50%;
+      border: 10px solid darken($orange, 15%);
+      width: $avatar-size;
+      height: $avatar-size;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+      }
+    }
+    
+    .avatar-column {
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    .filler-column {
+      @media (max-width: 989px) {
+        display: none;
+      }
+    }
+
+    .intro-text-column {
+      padding-top: 10px;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+
+      @media (min-width: 768px) and (max-width: 989px) {
+        width: 70%;
+      }
+
+      p {
+        line-height: 1.8em;
+      }
+    }
+  }
+
+  .skills {
+    padding: 45px 0;
+    background: $yellow;
+
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $orange;
+    }
+
+    .skill {
+      display: inline-block;
+      height: 250px;
+      width: 250px;
+      position: relative;
+      margin: 15px;
+
+      @media (min-width: 980px) {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: ' ';
+          background-color: rgba(black, 0);
+          transition: background .5s;
+          z-index: 0;
+        }
+
+        &:hover {
+          .skill-text .skill-description {
+            max-height: 150px;
+            opacity: 1;
+          }
+
+          &::before {
+            background-color: rgba(black, .15);
+          }
+        }
+      }
+
+      .skill-text {
+        z-index: 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 300;
+        text-align: center;
+
+        .skill-title {
+          display: inline-block;
+          color: white;
+          font-size: 2em;
+          text-transform: uppercase;
+          transition: font-size .5s;
+        }
+
+        .skill-description {
+          margin-top: 15px;
+          display: inline-block;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          color: white;
+          transition: max-height .5s, opacity .5s;
+
+          @media (max-width: 989px) {
+            max-height: 150px;
+            opacity: 1;
+          }
+
+          q {
+            font-style: italic;
+          }
+        }
+      }
+
+      &.laravel {
+        background: #f4645f;
+      }
+
+      &.php {
+        background: #8892BF;
+      }
+
+      &.html5 {
+        background: #f16529;
+      }
+
+      &.javascript {
+        background: #fac552;
+      }
+
+      &.css {
+        background: #1471b6;
+      }
+
+      &.git {
+        background: #f54d27;
+      }
+
+      &.linux {
+        background: #222;
+      }
+
+      &.security {
+        background: #008800;
+      }
+
+    }
+  }
+
+  .projects {
+    padding: 45px 0;
+    background: $green;
+    color: white;
+
+    .tile {
+      @media (max-width: 979px) {
+        display: block;
+        width: 100%;
+
+        &.is-ancestor {
+          margin: 0;
+        }
+      }
+    }
+
+    .title {
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+    }
+
+    .tile-container {
+      margin-top: 45px;
+
+      article {
+        color: white;
+        padding: 15px;
+
+        @media (min-width: 980px) {
+          min-width: 306px;
+        }
+
+        @media (min-width: 1180px) {
+          min-width: 380px;
+        }
+
+        .title {
+          font-weight: 400;
+        }
+
+        a {
+          color: white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        p {
+          margin-bottom: 15px;
+
+          i,
+          a,
+          span {
+            vertical-align: middle;
+          }
+
+          .separator {
+            display: inline-block;
+            margin: 0 5px;
+          }
+        }
+
+        ul {
+          margin-bottom: 15px;
+          list-style-position: inside;
+          padding-left: 15px;
+
+          li {
+            list-style-type: circle;
+          }
+        }
+
+        &.laravel-barion {
+          background: #0097db;
+        }
+
+        &.menetrend {
+          background: #f4645f;
+        }
+
+        &.feki {
+          background: #faac2f;
+        }
+
+        &.flk {
+          background: #4564ae;
+        }
+
+        &.indavideo {
+          background: #222;
+        }
+
+        &.nbf {
+          background: #008800;
+        }
+      }
+    }
+
+    .more-info {
+      margin-top: 30px;
+
+      a {
+        display: inline-block;
+        margin: 15px;
+        font-size: 2.5em;
+        color: white;
+        transition: color .2s;
+
+        &:hover {
+          color: darken(white, 5%);
+        }
+
+        span,
+        i {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .contact {
+    padding: 45px 0;
+    background: $orange;
+
+    .title {
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    a {
+      margin: 60px auto;
+      display: inline-block;
+      color: $yellow;
+      font-size: 1.65em;
+
+      i,
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+}
