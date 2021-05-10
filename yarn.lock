@@ -1728,8 +1728,8 @@ homedir-polyfill@^1.0.0:
     parse-passwd "^1.0.0"
 
 hosted-git-info@^2.1.4:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.1.5.tgz#0ba81d90da2e25ab34a332e6ec77936e1598118b"
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
 
 html-comment-regex@^1.1.0:
   version "1.1.1"
@@ -1803,10 +1803,6 @@ inherits@2.0.1:
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
-
-install@^0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/install/-/install-0.8.4.tgz#a638ef22463d840eb7e0e993a4b5d977e9f571c0"
 
 interpret@^0.6.4:
   version "0.6.6"
@@ -3953,10 +3949,6 @@ tty-browserify@0.0.0:
 tunnel-agent@~0.4.1:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.4.3.tgz#6373db76909fe570e08d73583365ed828a74eeeb"
-
-turbolinks@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/turbolinks/-/turbolinks-5.0.0.tgz#94c73fa299716824b0d96639b993b2efd7ef0e44"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
